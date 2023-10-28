@@ -1,0 +1,36 @@
+
+<html>
+<head>
+    <style>
+        body{
+            background-color: rgb(228, 175, 184);
+        }
+        h1{
+            color: rgb(184, 85, 102);
+        }
+    </style>
+    <title>yard to Square Feet Converter</title>
+    <script>
+        function convertYardToSquareFeet() {
+            // Get the value of Yard input
+            var Yard = parseFloat(document.getElementById("Yard").value);
+            
+            // Conversion factor: 1 Yard is equal to 9 square feet
+            var squareFeet =  Yard* 9;
+            
+            // Display the result on the screen
+            document.getElementById("result").innerHTML = Yard + " Yard is equal to " + squareFeet + " Square Feet.";
+        }
+    </script>
+</head>
+<body>
+    <h1>Yard to Square Feet Converter</h1>
+    <form>
+        <label for="Yard">Enter the number of Yard:</label>
+        <input type="number" id="Yard" placeholder="Enter Yard" step="0.01" required>
+        <br>
+        <input type="button" value="Convert" onclick="convertYardToSquareFeet()">
+    </form>
+    <p id="result"></p>
+</body>
+</html>
